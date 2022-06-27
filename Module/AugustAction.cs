@@ -22,7 +22,7 @@ namespace August
             Info = null;
         }
 
-        public void Invoke(object[] arguments)
+        public void Invoke(params object[] arguments)
         {
             Info.Invoke(Host, arguments);
         }
