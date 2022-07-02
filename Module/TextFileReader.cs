@@ -1,7 +1,6 @@
-﻿using August;
-using AugustCore;
-using System;
+﻿using System;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace August
 {
@@ -119,11 +118,11 @@ namespace August
             }
         }
 
-        public virtual void Initialize() { }
-        public virtual void Start() { }
-        public virtual void Update() { }
-        public virtual void ModuleLoaded() { }
-        public virtual void ModuleUnloading() { }
-        public virtual void Exit() { }
+        public virtual Task Initialize() { return Task.CompletedTask; }
+        public virtual Task Start() { return Task.CompletedTask; }
+        public virtual Task Update() { return Task.CompletedTask; }
+        public virtual Task ModuleLoaded() { return Task.CompletedTask; }
+        public virtual Task ModuleUnloading() { return Task.CompletedTask; }
+        public virtual Task Exit() { return Task.CompletedTask; }
     }
 }

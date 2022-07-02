@@ -1,30 +1,32 @@
-﻿namespace August
+﻿using System.Threading.Tasks;
+
+namespace August
 {
     public interface ICustomModuleEvent
     {
         /// <summary>
         /// Fire after modules is load
         /// </summary>
-        void Initialize();
+        Task Initialize();
         /// <summary>
         /// Fire after Initialize() called and framework finish initialization
         /// </summary>
-        void Start();
+        Task Start();
         /// <summary>
         /// Fire each framework update tick
         /// </summary>
-        void Update();
+        Task Update();
         /// <summary>
         /// Fire when module list is update
         /// </summary>
-        void ModuleLoaded();
+        Task ModuleLoaded();
         /// <summary>
         /// Fire when this module is unload
         /// </summary>
-        void ModuleUnloading();
+        Task ModuleUnloading();
         /// <summary>
         /// Fire when bot is exiting
         /// </summary>
-        void Exit();
+        Task Exit();
     }
 }

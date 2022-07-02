@@ -1,4 +1,4 @@
-﻿namespace AugustCore
+﻿namespace August
 {
     /// <summary>
     /// Global path const
